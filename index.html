@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>商城</title>
+	<link rel="stylesheet" href="css/public.css">
+	<script src="js/rem.js"></script>
+	<style>
+		.bar{
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 1.34rem;
+			background-color: #fff;
+			box-shadow: 0 0 0.1rem 0.04rem rgba(153,153,153,0.5);
+		}
+		.bar_box{
+			width: 100%;
+			height: 100%;
+			padding:0 0.78rem;
+		}
+		.bar_list{
+			height: 100%;
+			float: left;		
+			list-style: none;
+			text-align: center;
+			padding: 0.16rem 0;
+			margin-right: 1.56rem;
+		}
+		.index{
+			color: #ccc;
+			font-family: 'iconfont';
+			font-size: 0.6rem;
+			float: left;
+		}
+		.word{
+			display: block;
+			color: #ccc;
+			font-size: 0.24rem;
+			text-align: center;
+		}
+		.bar_list:nth-child(2){
+			margin-right: 1.2rem;
+		}
+		.bar_list:nth-child(4){
+			margin-right: 0;
+			margin-left: 1.2rem;
+		}
+		.bar_list:last-child{
+			margin-right: 0;
+			float: right;
+		}
+		.add{
+			width: 1.28rem;
+			height: 1.04rem;
+			background-color: #FF2741;
+			color: #fff;
+			line-height: 1.04rem;
+			text-align: center;
+			border-radius: 0.22rem;
+			float: left;
+			margin-top: 0.16rem;
+		}
+		#active{
+			color: #333;
+		}
+		#jiaobiao2 span{
+			float: left;
+			color: #fff;
+			font-family: 'iconfont';
+			font-size: 0.6rem;
+			margin-left: 0.3rem;
+			line-height: 1.26rem;
+		}
+		#jiaobiao2{
+			position: fixed;
+			bottom: 1.8rem;
+			width: 1.26rem;
+			height: 1.26rem;
+			border-radius: 1.26rem;
+			background-color: #313132;
+			right: 0.48rem;
+		}
+		body{
+			background-color: #F7F8FA;
+		}
+		header{
+			width: 100%;
+			height: 1.34rem;
+			background-color: #fff;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-bottom: 0.02rem solid #ccc;
+			padding: 0 0.46rem;
+		}
+		.xnav{
+			color: #979797;
+			font-family: 'iconfont';
+			line-height: 1.34rem;
+			font-size: 0.48rem;
+			float: left;
+		}
+		input{
+			width: 8.78rem;
+			height: 0.9rem;
+			background-color: #F5F5F5;
+			border-radius: 0.9rem;
+			float: left;
+			outline: none;
+			border: none;
+			margin-left: 0.6rem;
+			margin-top: 0.22rem;
+			font-size: 0.4rem;
+			color: #666;
+			line-height: 0.9rem;
+			padding-left: 1rem;
+			
+		}
+		.search{
+			font-family: 'iconfont';
+			color: #9F9F9F;
+			position: absolute;
+			top: 0.46rem;
+			font-size: 0.4rem;
+			left: 1.84rem;
+		}
+		.banner{
+			width: 100%;
+			height: 3.46rem;
+			margin-top: 1.34rem;
+		}
+		h1{
+			font-size: 0.4rem;
+			color: #343635;
+			text-align: center;
+			border-top: 0.02rem solid #fff;
+			margin-top: 0.32rem;
+			line-height: 1.12rem;
+			position: relative;
+		}
+		h1:before{
+			content: "";
+			width: 0.22rem;
+			height: 0.06rem;
+			background-color: #343635;
+			position: absolute;
+			left: 3.82rem;
+			top: 0.52rem;
+		}
+		h1:after{
+			content: "";
+			width: 0.22rem;
+			height: 0.06rem;
+			background-color: #343635;
+			position: absolute;
+			right: 3.82rem;
+			top: 0.52rem;
+		}
+		.youhui{
+			width: 100%;
+			height: 4.94rem;
+		}
+		.adv{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+		}
+		.adv_list{
+			width: 5.36rem;
+			height: 3.42rem;
+			background-color: #fff;
+			position: relative;
+			float: left;
+		}
+		.adv_list:nth-child(2){
+			margin-left: 0.02rem;
+		}
+		.limit{
+			width: 1.62rem;
+			height: 0.7rem;
+			margin-top: 0.26rem;
+			float: left;
+			line-height: 0.7rem;
+			color: #fff;
+			font-size: 0.4rem;
+			text-align: center;
+			display: inline-block;
+			background-color: #FF7865;
+			position: relative;
+			z-index: 2;
+		}
+		.half{
+			width: 0.7rem;
+			height: 0.7rem;
+			background-color: #FF7865;
+			border-radius: 50%;
+			position: absolute;
+			left: 1.23rem;
+			top: 0.26rem;
+			z-index: 1;
+		}
+		.you{
+			font-size: 0.28rem;
+			color: #fff;
+			line-height: 0.7rem;
+			position: absolute;
+			top: 0.28rem;
+			left: 1.56rem;
+			z-index: 5;
+			font-family: 'iconfont';
+		}
+		.title{
+			color: #ccc;
+			float: left;
+			font-size: 0.32rem;
+			margin-top: 0.38rem;
+			margin-left: 0.4rem;
+		}
+		.tejia{
+			width: 100%;
+			height: auto;
+			margin-top: 0.5em;
+			float: left;
+		}
+		.tejia img{
+			width: 1.62rem;
+			height: 1.94rem;
+			float: left;
+		}
+		.np{
+			color: #FE4947;
+			float: left;
+			font-size: 0.28rem;
+			margin-top: 0.7rem;
+		}
+		.op{
+			color: #ccc;
+			float: left;
+			font-size: 0.24rem;
+			text-decoration-line: line-through;
+
+		}
+		.price{
+			width: 1rem;
+			height: auto;
+			float: left;
+		}
+		h2{
+			font-size: 0.4rem;
+			float: left;
+			margin-top: 0.4rem;
+			padding-left: 0.4rem;
+		}
+		p{
+			font-size: 0.12rem;
+			color: #ccc;
+			padding-left: 0.4rem;
+			float: left;
+		}
+		.fu{
+			width: 100%;
+			height: 2rem;
+			float: left;
+		}
+		.adv_bottom{
+			width: 5.36rem;
+			height: 2.28rem;
+			float: left;
+			background-color: #fff;
+			margin-top: 0.02rem;
+		}
+		h3{
+			font-size: 0.4rem;
+			color: #333;
+			margin-left: 0.42rem;
+			margin-top: 0.72rem;
+		}
+		h4{
+			float: left;
+			font-size: 0.4rem;
+			color: #ccc;
+			margin-left: 0.42rem;
+		}
+		.adv_bottom img{
+			width: 1.1rem;
+			height: 1.1rem;
+			float: right;
+			margin-top: -0.38rem;
+			margin-right:0.54rem;
+		}
+		.adv_bottom:nth-child(4){
+			margin-left: 0.02rem;
+		}
+		.edit{
+			width: 100%;
+			margin-top: 0.3rem;
+			background-color: #fff;
+			height: 4.2rem;
+		}
+		h5{
+			font-size: 0.4rem;
+		    color: #343635;
+		    margin-left: 0.62rem;
+		    line-height: 1.12rem;
+		    position: relative;
+		}
+		h5:before{
+			content: "";
+			width: 0.08rem;
+			height: 0.34rem;
+			background-color: #FD544F;
+			position: absolute;
+			left: -0.32rem;
+			top: 0.32rem;
+		}
+		.edit_img{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			padding: 0 0.28rem;
+		}
+		.edit img{
+			width: 3.22rem;
+			height: 3.02rem;
+			float: left;
+		}
+		.edit img:nth-child(2){
+			margin: 0 0.28rem;
+		}
+		.list{
+			width: 100%;
+			height: 2.3rem;
+			background-color: #fff;
+			margin-top: 0.3rem;
+			padding: 0 0.56rem;
+		}
+		.list li{
+			width: 1.5rem;
+			height: 100%;
+			float: left;
+			margin-right: 0.54rem;
+		}
+		.mu{
+			margin-left: 0.3rem;
+		}
+		.list li:last-child{
+			margin-right: 0;
+		}
+		.list li img{
+			width: 1.04rem;
+			height: 1.04rem;
+			float: left;
+			margin-top: 0.34rem;
+			margin-left: 0.1rem;
+		}
+		.list li p{
+			display: block;
+			font-size: 0.22rem;
+			color: #333;
+			padding-left: 0;
+			margin-top: 0.18rem;
+		}
+		.content{
+			padding:0 0.24rem;
+			margin-top: 0.54rem;
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+		}
+		.content_list{
+			width: 5.12rem;
+			height: 8.26rem;
+			border-radius: 0.02rem;
+			background: url('img/Screenshot_2018-04-11-17-17-03-17_03.png'); 
+			background-position: top center;
+			background-repeat: no-repeat;
+			background-size: 100% 5.3rem;
+			float: left;
+			margin-bottom: 0.3rem;
+			background-color: #fff;
+			border: 1px solid #E3E8EA;
+		}
+		.content_list h4{
+			font-size: 0.36rem;
+			color: #333;
+			margin-top: 5.4rem;
+			float: left;
+			margin-left: 0.24rem;
+		}
+		.content_list p{
+			color: #666;
+			font-size: 0.4rem;
+			float: left;
+			margin-left: 0.24rem;
+			margin-top: 0.20rem;
+			padding-left: 0;
+		}
+		.content_list span{
+			font-size: 0.3rem;
+			color: #FF2741;
+			float: left;
+			margin-left: 0.24rem;
+			margin-top: 0.2rem;
+		}
+		.content_list em{
+			font-size: 0.3rem;
+			color: #adadad;
+			float: left;
+			margin-left: 0.24rem;
+			margin-top: 0.2rem;
+			text-decoration-line: line-through;
+		}
+		.content_list i{
+			font-size: 0.36rem;
+			color: #333;
+			float: left;
+			margin-left: 0.4rem;
+			margin-top: 0.2rem;
+		}
+		.tejia{
+			margin-left: 0.3rem;
+		}
+		.shop_title {
+		    width:auto;
+		    height: 0.46rem;
+		    background-color: #FF2741;
+		    border-radius: 0.04rem;
+		    color: #fff;
+		    text-align: center;
+		    line-height: 0.46rem;
+		    font-size: 0.32rem;
+		    float: left;
+		}
+		.price{
+			width: 100%;
+			height: auto;
+		}
+		.zijian{
+			height: 0.44rem;
+			background-color: #fff;
+			border:0.04rem solid #FF2741;
+			color: #FF2741;
+			line-height: 0.34rem;
+		}
+		.content_list:nth-child(2n){
+			width: 4.92rem;
+			margin-left: 0.24rem;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<em class="xnav">&#xe62d;</em>
+		<input type="text" placeholder="搜索笔记、商品和用户">
+		<span class="search">&#xe633;</span>
+	</header>
+	<img src="img/Screenshot_2018-04-11-17-16-53-39_02.png" alt="" class="banner">
+	<h1>新人专属优惠</h1>
+	<img src="img/Screenshot_2018-04-11-17-16-53-39_04.png" alt="" class="youhui">
+	<ul class="adv">
+		<li class="adv_list">
+			<div class="limit">
+				限时购
+			</div>
+			<em class="you">&#xe667;</em>
+			<div class="half"></div>
+			<span class="title">14点场 今晚九点结束</span>
+			<div class="tejia">
+				<img src="img/Screenshot_2018-04-11-17-16-53-39_08.png" alt="">
+				<div class="price">
+					<span class="np">￥199</span>
+					<span class="op">￥788</span>
+				</div>
+				<img src="img/Screenshot_2018-04-11-17-16-53-39_10.png" alt="">
+				<div class="price">
+					<span class="np">￥128</span>
+					<span class="op">￥188</span>
+				</div>
+			</div>
+		</li>
+		<li class="adv_list">
+			<h2>福利社</h2>
+			<p>面膜￥29.9 去角质脚膜￥29</p>
+			<img src="img/Screenshot_2018-04-11-17-16-53-39_07.png" alt="" class="fu">
+		</li>
+		<li class="adv_bottom">
+			<h3>黑卡会员</h3>
+			<h4>百丽低至6折</h4>
+			<img src="img/QQ图片20180301144734_03.png" alt="" class="black">
+		</li>
+		<li class="adv_bottom">
+			<h3>海外直邮</h3>
+			<h4>5折入宋茜同款</h4>
+			<img src="img/QQ图片20180301144734_03 (2).png" alt="" class="black">
+		</li>
+	</ul>
+
+	<section class="edit">
+		<h5>编辑推荐</h5>
+		<div class="edit_img">
+			<img src="img/Screenshot_2018-04-11-17-16-58-58_03.png" alt="">
+			<img src="img/Screenshot_2018-04-11-17-16-58-58_05.png" alt="">
+			<img src="img/Screenshot_2018-04-11-17-16-58-58_07.png" alt="">
+		</div>
+	</section>
+
+	<ul class="list">
+		<li>
+			<img src="img/Screenshot_2018-04-11-17-16-58-58_13.png" alt="">
+			<p>美妆个护</p>
+		</li>
+		<li>
+			<img src="img/Screenshot_2018-04-11-17-16-58-58_15.png" alt="">
+			<p class="mu">母婴</p>
+		</li>
+		<li>
+			<img src="img/Screenshot_2018-04-11-17-16-58-58_17.png" alt="">
+			<p>服饰鞋包</p>
+		</li>
+		<li>
+			<img src="img/Screenshot_2018-04-11-17-16-58-58_19.png" alt="">
+			<p>家居生活</p>
+		</li>
+		<a href="list.html">
+		<li>
+			<img src="img/Screenshot_2018-04-11-17-16-58-58_21.png" alt="">
+			<p>更多分类</p>
+		</li>
+		</a>
+	</ul>
+
+	<ul class="content">
+		<li class="content_list">
+			<h4>波兰·袁姗姗同款</h4>
+			<p>ZINJA 羊奶面膜 20片</p>
+			<div class="price">
+				<span>￥85</span>
+				<em>￥80</em>
+				<i>ZINJA</i>
+			</div>
+			<div class="shop_title tejia zijian">自减</div>
+			<div class="shop_title tejia">限时特价</div>
+			<div class="shop_title tejia">立减2</div>
+		</li>
+		<li class="content_list">
+			<h4>波兰·袁姗姗同款</h4>
+			<p>ZINJA 羊奶面膜 20片</p>
+			<div class="price">
+				<span>￥85</span>
+				<em>￥80</em>
+				<i>ZINJA</i>
+			</div>
+			<div class="shop_title tejia zijian">自减</div>
+			<div class="shop_title tejia">限时特价</div>
+			<div class="shop_title tejia">立减2</div>
+		</li>
+		<li class="content_list">
+			<h4>波兰·袁姗姗同款</h4>
+			<p>ZINJA 羊奶面膜 20片</p>
+			<div class="price">
+				<span>￥85</span>
+				<em>￥80</em>
+				<i>ZINJA</i>
+			</div>
+			<div class="shop_title tejia zijian">自减</div>
+			<div class="shop_title tejia">限时特价</div>
+			<div class="shop_title tejia">立减2</div>
+		</li>
+		<li class="content_list">
+			<h4>波兰·袁姗姗同款</h4>
+			<p>ZINJA 羊奶面膜 20片</p>
+			<div class="price">
+				<span>￥85</span>
+				<em>￥80</em>
+				<i>ZINJA</i>
+			</div>
+			<div class="shop_title tejia zijian">自减</div>
+			<div class="shop_title tejia">限时特价</div>
+			<div class="shop_title tejia">立减2</div>
+		</li>
+	</ul>
+
+	<a href="shopcar.html">
+		<main id="jiaobiao2">
+			<span>&#xe631;</span>
+		</main>
+	</a>
+	<section class="bar">
+		<ul class="bar_box">
+			<li class="bar_list">
+				<em class="index">&#xe610;</em>
+				<span class="word">首页</span>
+			</li>
+			<li class="bar_list">
+				<a href="index.html"><em id="active" class="index">&#xe736;</em></a>
+				<span id="active" class="word">商城</span>
+			</li>
+			<div class="add">+</div>
+			<li class="bar_list">
+				<em class="index">&#xe759;</em>
+				<span class="word">消息</span>
+			</li>
+			<li class="bar_list">
+				<a href="center.html"><em class="index">&#xe65f;</em></a>
+				<span class="word">我</span>
+			</li>
+		</ul>
+	</section>
+</body>
+</html>

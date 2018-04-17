@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/public.css">
+	<script src="js/rem.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-style: normal;
+		}
+		header{
+			width: 100%;
+			height: 8.78rem;
+			background: url('img/ad45c482f3b192f45608e9cc4e7198e942d1d92d105d6-T1lJ5A_fw658.jpg') no-repeat;
+			background-size: cover;
+			position: relative;
+		}
+		a{
+			color: #333;
+			text-decoration-line: none;
+		}
+		header:before{
+			content: "";
+			width: 100%;
+			height: 8.78rem;
+			background-color: rgba(0, 0, 0,0.4);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.header{
+			width: 100%;
+			height: 8.78rem;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.head{
+			width: 100%;
+		}
+		.head em:first-child{
+			margin-right: 0.48rem;
+		}
+		.head em{
+			font-size: 0.68rem;
+			font-family: 'iconfont';
+			color: #fff;
+			font-weight: bold;
+			float: right;
+			margin-top: 0.5rem;
+			margin-right: 0.32rem;
+		}
+		.head_img{
+			width: 2.26rem;
+			height: 2.26rem;
+			border: 2px solid #fff;
+			margin: 0 auto;
+			background: url('img/QQ图片20180220112229.jpg');
+			border-radius: 50%;
+			background-repeat: no-repeat;
+			background-size: 100% ;
+			margin-top: 1.68rem;
+
+		}
+		h1{
+			font-size: 0.52rem;
+			color: #fff;
+			text-align: center;
+			margin-top: 0.6rem;
+		}
+		.blackcard{
+			width: 3.6rem;
+			height: 0.72rem;
+			background-color: #38393E;
+			margin: 0 auto;
+			border-radius: 0.72rem;
+			margin-top: 0.5rem;
+			color: #EFD097;
+			line-height: 0.72rem;
+			text-align: center;
+			font-size: 0.36rem;
+		}
+		.blackcard em{
+			font-size: 0.28rem;
+			margin-left: 0.28rem;
+			font-family: 'iconfont';
+
+		}
+		.guanzhu{
+			margin-left: 1.52rem;
+			margin-top: 0.84rem;
+			overflow: hidden;
+			position: relative;
+		}
+		.guanzhu li{
+			width: 2.6rem;
+			float: left;
+			color: #fff;
+			text-align: center;
+			list-style: none;
+		}
+		.guanzhu h4{
+			font-size: 0.36rem;
+		}
+		.guanzhu p{
+			font-size: 0.4rem;
+			margin-top: 0.24rem;
+		}
+		.guanzhu:after{
+			content: "";
+			width: 0.02rem;
+			height: 0.48rem;
+			background-color: #fff;
+			position: absolute;
+			top: 0.18rem;
+			left: 2.6rem;
+		}
+		.guanzhu:before{
+			content: "";
+			width: 0.02rem;
+			height: 0.48rem;
+			background-color: #fff;
+			position: absolute;
+			top: 0.18rem;
+			left: 5.2rem;
+		}
+		.edit{
+			width: 3.84rem;
+			height: 0.94rem;
+			border: 2px solid #ccc;
+			margin: 0 auto;
+			margin-top: 0.6rem;
+			border-radius: 0.06rem;
+			color: #333;
+			text-align: center;
+			line-height: 0.94rem;
+			font-size: 0.44rem;
+		}
+		.message{
+			width: 9.88rem;
+			height: 1.46rem;
+			margin: 0 auto;
+			border-bottom: 1px solid #ccc;
+			position: relative;
+		}
+		.address,.socal{
+			width: 4.94rem;
+			height: 1.46rem;
+			float: left;
+			color: #666;
+			font-size: 0.4rem;
+			text-align: center;
+			line-height: 1.46rem;
+		}
+		.socal{
+			margin-left: -0.4rem;
+		}
+		.address em,.socal em{
+			color: #ccc;
+			font-family: 'iconfont';
+		}
+		.jiantou{
+			font-family: "iconfont";
+			font-size: 0.3rem;
+			color: #ccc;
+			line-height: 1.46rem;
+			float: left;
+		}
+		.message:after{
+			content: "";
+			width: 0.04rem;
+			height: 0.3rem;
+			background-color: #ccc;
+			position: absolute;
+			left: 4.7rem;
+			top: 0.6rem;
+		}
+		.descri{
+			width: 100%;
+			height: 1.46rem;
+			padding-left: 0.46rem;
+			color: #666;
+			line-height: 1.46rem;
+			font-size: 0.4rem;
+			border-bottom: 1px solid #E6E6E6;
+		}
+		.title{
+			width: 100%;
+			height: 1.32rem;
+
+		}
+		.note,.zhuanji{
+			width: 3.2rem;
+			height: 1.28rem;
+			border-bottom: 2px solid #FF2741;
+			margin-left: 2.18rem;
+			text-align: center;
+			line-height: 1.28rem;
+			color: #333;
+			font-size: 0.48rem;
+			float: left;
+		}
+		.zhuanji{
+			color: #999;
+			margin-left: 0;
+			border-bottom: 0;
+		}
+		.note_content{
+			border-top: 0.32rem solid #F0F3F5;
+			width: 100%;
+			height: auto;
+			margin-bottom: 400px;
+		}
+		.note_content img{
+			width: 100%;
+			height: auto;
+		}
+		.fir_note{
+			width: 4.48rem;
+			height: 1.22rem;
+			border: 1px solid #FF2A44;
+			color: #FF2A44;
+			text-align: center;
+			line-height:1.22rem;
+			margin: 0 auto;
+			border-radius: 0.08rem;
+			font-size: 0.44rem; 
+
+		}
+		.bar{
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 1.34rem;
+			background-color: #fff;
+			box-shadow: 0 0 5px 2px rgba(153,153,153,0.5);
+		}
+		.bar ul{
+			width: 100%;
+			height: 100%;
+			padding:0 0.78rem;
+		}
+		.bar_list{
+			height: 100%;
+			float: left;		
+			list-style: none;
+			text-align: center;
+			padding: 0.16rem 0;
+			margin-right: 1.56rem;
+		}
+		.bar_list em{
+			color: #ccc;
+			font-family: 'iconfont';
+			font-size: 0.6rem;
+			float: left;
+		}
+		.bar_list span{
+			display: block;
+			color: #ccc;
+			font-size: 0.36rem;
+			text-align: center;
+		}
+		.bar_list:nth-child(2){
+			margin-right: 1.2rem;
+		}
+		.bar_list:nth-child(4){
+			margin-right: 0;
+			margin-left: 1.2rem;
+		}
+		.bar_list:last-child{
+			margin-right: 0;
+			float: right;
+		}
+		.add{
+			width: 1.28rem;
+			height: 1.04rem;
+			background-color: #FF2741;
+			color: #fff;
+			line-height: 1.04rem;
+			text-align: center;
+			border-radius: 0.22rem;
+			float: left;
+		}
+		#active{
+			color: #333;
+		}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="header">
+		<div class="head">
+			<em>&#xe7b8;</em>
+			<a href="login.html"><em>&#xe665;</em></a>
+		</div>
+		<div class="head_img"></div>
+		<h1>不美不萌々关你屁事</h1>
+		<div class="blackcard">
+			成为黑卡会员<em>&#xe667;</em>
+		</div>
+		<ul class="guanzhu">
+			<li>
+				<h4>1</h4>
+				<p>关注</p>
+			</li>
+			<li>
+				<h4>0</h4>
+				<p>粉丝</p>
+			</li>
+			<li>
+				<h4>0</h4>
+				<p>获赞与收藏</p>
+			</li>
+		</ul>
+	</div>
+	<section class="edit"><a href="resouce.html">编辑个人资料</a></section>
+	<section class="message">
+		<div class="address">
+			<em>&#xe679;</em>
+			完善你的位置信息
+		</div>
+		<div class="socal">
+			<em>&#xe606;</em>
+			社区等级：升级规则
+		</div>
+		<em class="jiantou">&#xe667;</em>
+	</section>
+	<section class="descri">添加个人描述，可让大家更好的认识你</section>
+	<section class="title">
+		<div class="note">笔记·0</div>
+		<div class="zhuanji">专辑·0</div>
+	</section>
+	<section class="note_content">
+		<img src="img/Screenshot_2018-04-09-13-06-08-76_02.png" alt="">
+		<div class="fir_note">发布你的第一篇笔记</div>
+	</section>
+	<section class="bar">
+		<ul>
+			<li class="bar_list">
+				<em>&#xe610;</em>
+				<span>首页</span>
+			</li>
+			<li class="bar_list">
+				<a href="index.html"><em>&#xe736;</em></a>
+				<span>商城</span>
+			</li>
+			<div class="add">+</div>
+			<li class="bar_list">
+				<em>&#xe759;</em>
+				<span>消息</span>
+			</li>
+			<li class="bar_list">
+				<a href="center.html"><em id="active">&#xe65f;</em></a>
+				<span id="active">我</span>
+			</li>
+		</ul>
+	</section>
+</body>
+</html>

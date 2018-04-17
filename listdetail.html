@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/public.css">
+	<script src="js/rem.js"></script>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		text-decoration: none;
+	}
+	body{
+		background-color: #F5F8FA;
+	}
+	header{
+		background-color: #fff;
+		width: 100%;
+		height: 2.42rem;
+		padding-top: 0.3rem;
+		box-shadow: 0 0 0.04rem 0.04rem #ccc;
+	}
+	.return{
+		color: #E6E6E6;
+		font-family: 'iconfont';
+		font-size: 0.52rem;
+		line-height: 0.9rem;
+		padding-left: 0.48rem;
+		float: left;
+	}
+	input{
+		border: none;
+		outline: none;
+		background-color: #E6E6E6;
+		width: 9.18rem;
+		height: 0.9rem;
+		border-radius: 0.12rem;
+		float: left;
+		margin-left: 0.3rem;
+		font-size: 0.4rem;
+		padding-left: 0.56rem;
+	}
+	.close{
+		font-size: 0.46rem;
+		color: #818181;
+		font-family: 'iconfont';
+		position: absolute;
+		top: 0.52rem;
+		right: 0.84rem;
+	}
+	.title{
+		width: 5.08rem;
+		height: 1.14rem;
+		color: #ccc;
+		font-size: 0.4rem;
+		padding-top:0.56rem;
+		margin: 0 auto;
+		margin-top: 0.9rem;
+	}
+	span{
+		padding-bottom: 0.06rem;
+		margin: 0 0.44rem;
+		float: left;
+	}
+	.active{
+		color: #333;
+		border-bottom: 0.06rem solid #FF2741;
+	}
+	.nav{
+		width: 100%;
+		height: 1.2rem;
+		margin-top: 0.32rem;
+		background-color: #fff;
+		border-bottom:2px solid #ccc;
+		padding: 0 0.44rem;
+	}
+	li{	
+		height: 100%;
+		color: #666;
+		font-size: 0.4rem;
+		line-height: 1.2rem;
+		float: left;
+		margin-right: 1.32rem;
+	}
+	li:nth-child(3){
+		margin-right: 1rem;
+	}
+	li:nth-child(4){
+		margin-right: 0;
+		padding-right: 0.8rem;
+		border-right: 1px solid #ccc;
+	}
+	li:last-child{
+		padding-left: 0.4rem;
+		margin-right: 0;
+	}
+	.price{
+		width: 0.24rem;
+		height: 100%;
+		margin-left: 0.18rem;
+		line-height: 1.2rem;
+		float: right;
+		margin-top: -0.1rem;
+	}
+	.top,.bottom{
+		display: block;
+		font-size: 0.24rem;
+		color: #ccc;
+		font-family: 'iconfont';
+		width: 0.24rem;
+		height: 0.24rem;
+	}
+	.shaixuan{
+		font-size: 0.32rem;
+		color: #ccc;
+		font-family: 'iconfont';
+		float: right;
+		margin-left: 0.12rem;
+	}
+	.content{
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		padding: 0 0.24rem;
+		margin-top: 0.24rem;
+	}
+	#content_list{
+		width: 5.12rem;
+		height: 8.8rem;
+		background-color: #fff;
+		border: 1px solid #ccc;
+		padding-left: 0;
+		float: left;
+		margin-right: 0;
+		margin-bottom: 0.24rem;
+	}
+	.content_img{
+		width: 5.02rem;
+		height: 5.04rem;
+		float: left;
+	}
+	.content_img1{
+		width: 4.88rem;
+		height: 5.04rem;
+		float: left;
+	}
+	.list_bottom{
+		width: 100%;
+		height: auto;
+		padding: 0 0.3rem;
+		margin-top: 0.4rem;
+		overflow: hidden;
+	}
+	h1{
+		font-size: 0.36rem;
+		color: #333;
+		float: left;
+	}
+	h2{
+		color: #999;
+		font-size: 0.32rem;
+		float: left;
+		line-height: 0.42rem;
+	}
+	.jiage{
+		font-size: 0.3rem;	
+		padding: 0;
+		margin: 0;
+		float: left;
+		color: #FF2741;
+	}
+	.r{
+		width: 0.3rem;
+		height: 0.3rem;
+		float: left;
+		margin-top: 0.48rem;
+		margin-left: 0.22rem;
+	}
+	.nowp{
+		padding: 0;
+		margin: 0;
+		font-size: 0.24rem;
+		color: #333;
+		float: left;
+		margin-top: 0.04rem;
+	}
+	.fu{
+		float: right;
+		width: 0.32rem;
+		height: 0.32rem;
+		margin-top: 0.48rem;
+	}
+	.fuword{
+		float: right;
+	}
+	.zi{
+		width: 0.6rem;
+		height: 0.4rem;
+		float: left;
+		border: 1px solid #FF2741;
+		color: #FF2741;
+		text-align: center;
+		line-height: 0.4rem;
+		font-size: 0.26rem;
+		border-radius: 0.04rem;
+	}
+	.money{
+		width: 100%;
+		height:0.6rem;
+		float: left;
+	}
+	.biaoqian{
+		width: 100%;
+		height: 0.6rem;
+		float: left;
+		margin-top: 0.36rem;
+		border-radius: 0.04rem;
+	}
+	.limit{
+		width: 1.24rem;
+		height: 0.42rem;
+		border-radius: 0.04rem;
+		font-size: 0.26rem;
+		color: #fff;
+		background-color: #FF2741;
+		float: left;
+		text-align: center;
+		line-height: 0.42rem;
+		margin-left: 0.16rem;
+	}
+	#content_list:nth-child(2n){
+		width: 4.88rem;
+		margin-left: 0.26rem;
+	}
+	</style>
+</head>
+<body>
+	<header>
+		<a href="list.html"><em class="return">&#xe622;</em></a>
+		<input type="text" placeholder="化妆水">
+		<em class="close">&#xe605;</em>
+		<div class="title">
+			<span>全部</span>
+			<span class="active">商品</span>
+			<span>用户</span>
+		</div>
+	</header>
+	<ul class="nav">
+		<li>综合</li>
+		<li>销量</li>
+		<li>上新</li>
+		<li>价格
+			<section class="price">
+				<em class="top">&#xe600;</em><em class="bottom">&#xe654;</em>
+			</section>
+		</li>
+		<li>筛选<em class="shaixuan">&#xe648;</em></li>
+	</ul>
+	<ul class="content">
+		<li id="content_list">
+			<img src="img/Screenshot_2018-04-10-15-59-08-79_03.png" alt="" class="content_img">
+			<div class="list_bottom">
+				<h1>日本·实用平价人手一瓶</h1>
+				<h2>Dr.Ci:Labo城野医生 毛孔收敛化妆水 限量版 200ml</h2>
+				<div class="money">
+					<span class="jiage">￥178</span>
+					<img src="img/QQ图片20180301144734_03.png" alt="" class="r">
+					<span class="nowp">￥168</span>
+					<span class="nowp fuword">福利社</span>
+					<img src="img/sc1.png" alt="" class="fu">
+				</div>
+				<div class="biaoqian">
+					<div class="zi">自营</div>
+					<div class="limit">限时特价</div>
+				</div>
+			</div>
+		</li>
+		<li id="content_list">
+			<img src="img/Screenshot_2018-04-10-15-59-08-79_05.png" alt="" class="content_img1">
+			<div class="list_bottom">
+				<h1>日本·实用平价人手一瓶</h1>
+				<h2>Dr.Ci:Labo城野医生 毛孔收敛化妆水 常规版 100ml</h2>
+				<div class="money">
+					<span class="jiage">￥99</span>
+					<img src="img/QQ图片20180301144734_03.png" alt="" class="r">
+					<span class="nowp">￥88</span>
+					<span class="nowp fuword">福利社</span>
+					<img src="img/sc1.png" alt="" class="fu">
+				</div>
+				<div class="biaoqian">
+					<div class="zi">自营</div>
+					<div class="limit">限时特价</div>
+				</div>
+			</div>
+		</li>
+		<li id="content_list">
+			<img src="img/Screenshot_2018-04-10-15-59-08-79_03.png" alt="" class="content_img">
+			<div class="list_bottom">
+				<h1>日本·实用平价人手一瓶</h1>
+				<h2>Dr.Ci:Labo城野医生 毛孔收敛化妆水 限量版 200ml</h2>
+				<div class="money">
+					<span class="jiage">￥178</span>
+					<img src="img/QQ图片20180301144734_03.png" alt="" class="r">
+					<span class="nowp">￥168</span>
+					<span class="nowp fuword">福利社</span>
+					<img src="img/sc1.png" alt="" class="fu">
+				</div>
+				<div class="biaoqian">
+					<div class="zi">自营</div>
+					<div class="limit">限时特价</div>
+				</div>
+			</div>
+		</li>
+		<li id="content_list">
+			<img src="img/Screenshot_2018-04-10-15-59-08-79_05.png" alt="" class="content_img1">
+			<div class="list_bottom">
+				<h1>日本·实用平价人手一瓶</h1>
+				<h2>Dr.Ci:Labo城野医生 毛孔收敛化妆水 常规版 100ml</h2>
+				<div class="money">
+					<span class="jiage">￥99</span>
+					<img src="img/QQ图片20180301144734_03.png" alt="" class="r">
+					<span class="nowp">￥88</span>
+					<span class="nowp fuword">福利社</span>
+					<img src="img/sc1.png" alt="" class="fu">
+				</div>
+				<div class="biaoqian">
+					<div class="zi">自营</div>
+					<div class="limit">限时特价</div>
+				</div>
+			</div>
+		</li>
+		<li id="content_list">
+			<img src="img/Screenshot_2018-04-10-15-59-08-79_03.png" alt="" class="content_img">
+			<div class="list_bottom">
+				<h1>日本·实用平价人手一瓶</h1>
+				<h2>Dr.Ci:Labo城野医生 毛孔收敛化妆水 限量版 200ml</h2>
+				<div class="money">
+					<span class="jiage">￥178</span>
+					<img src="img/QQ图片20180301144734_03.png" alt="" class="r">
+					<span class="nowp">￥168</span>
+					<span class="nowp fuword">福利社</span>
+					<img src="img/sc1.png" alt="" class="fu">
+				</div>
+				<div class="biaoqian">
+					<div class="zi">自营</div>
+					<div class="limit">限时特价</div>
+				</div>
+			</div>
+		</li>
+		<li id="content_list">
+			<img src="img/Screenshot_2018-04-10-15-59-08-79_05.png" alt="" class="content_img1">
+			<div class="list_bottom">
+				<h1>日本·实用平价人手一瓶</h1>
+				<h2>Dr.Ci:Labo城野医生 毛孔收敛化妆水 常规版 100ml</h2>
+				<div class="money">
+					<span class="jiage">￥99</span>
+					<img src="img/QQ图片20180301144734_03.png" alt="" class="r">
+					<span class="nowp">￥88</span>
+					<span class="nowp fuword">福利社</span>
+					<img src="img/sc1.png" alt="" class="fu">
+				</div>
+				<div class="biaoqian">
+					<div class="zi">自营</div>
+					<div class="limit">限时特价</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</body>
+</html>

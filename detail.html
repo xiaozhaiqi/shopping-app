@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/public.css">
+	<script src="js/rem.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			background-color: #F5F8FA;
+		}
+		header{
+			background-color: #fff;
+			width: 100vw;
+			height: 1.26rem;
+			padding: 0 0.6rem;
+			line-height: 1.26rem;
+			color: #666;
+		}
+		em{
+			font-family: 'iconfont';
+			font-size: 0.6rem;
+		}
+		.return{
+			float: left;
+		}
+		.download{
+			float: right;
+		}
+		img{
+			width: 100vw;
+			height: 9.54rem;
+		}
+		.tejia{
+			width: 100vw;
+			height: 3.16rem;
+			padding-left: 0.42rem;
+			background-color: #fff;
+			border-top: 1px solid #ECECEC;
+		}
+
+		.content1{
+			width: 100%;
+			height: 0.48rem;
+			margin-top: 0.34rem;
+			overflow: hidden;
+		}
+		.limit{
+			width: 1.44rem;
+			height: 0.48rem;
+			background-color: #FF7F8A;
+			float: left;
+			color: #fff;
+			line-height: 0.48rem;
+			text-align: center;
+			font-size: 0.32rem;
+		}
+		.money{
+			color: #FF2741;
+			font-size: 0.44rem;
+			line-height: 0.48rem;
+			float: left;
+		}
+		.oldmoney{
+			font-size: 0.24rem;
+			color: #666;
+			float: left;
+			line-height: 0.48rem;
+			margin-left: 0.16rem;
+		}
+		.content1 em{
+			font-size: 0.24rem;
+			color: #666;
+			float: left;
+			line-height: 0.48rem;
+			margin-left: 0.16rem;
+			text-decoration-line: line-through;
+		}
+		.shui{
+			width: 0.72rem;
+			height: 0.4rem;
+			float: left;
+			border: 2px solid #FF7F8A;
+			margin-left: 0.14rem;
+			color: #FF7F8A;
+			text-align: center;
+			line-height: 0.4rem;
+			font-size: 0.3rem;
+		}
+		.name{
+			font-size: 0.4rem;
+			color: #666;
+			margin-top: 0.52rem;
+		}
+		.from{
+			margin-top: 0.52rem;
+			color: #6E6E6E;
+			font-size: 0.4rem;
+		}
+		.from a{
+			color: #6096E2;
+		}
+		.new{
+			width: 100%;
+			height: 1.26rem;
+			background-color: #fff;
+			margin-top: 0.3rem;
+			padding-left: 0.42rem;
+			float: left;
+		}
+		.zhuanshu{
+			width: 1.24rem;
+			height: 0.34rem;
+			color: #FF7F8A;
+			border: 2px solid #FF7F8A;
+			line-height: 0.34rem;
+			text-align: center;
+			font-size: 0.28rem;
+			margin-top: 0.4rem;
+			float: left;
+		}
+		.new p{
+			margin-left: 0.26rem;
+			line-height: 1.26rem;
+			color: #333;
+			font-size: 0.36rem;
+			float: left;
+		}
+		.new em{
+			color: #ccc;
+			font-size: 0.4rem;
+			line-height: 1.26rem;
+			font-family: "iconfont";
+			float: right;
+			margin-right: 0.3rem;
+		}
+		.bar{
+			width: 100%;
+			height: 1.44rem;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			background-color: #fff;
+
+		}
+		.bar ul{
+			width: 4.5rem;
+			height: 100%;
+			float: left;
+		}
+		.bar ul li{
+			width: 1.5rem;
+			height: 100%;
+			float: left;
+			color: #767676;
+		}
+		.bar li em{
+			font-size: 0.52rem;
+			font-family: 'iconfont';
+			text-align: center;
+			margin-top: 0.24rem;
+			float: left;
+			margin-left: 0.42rem;
+		}
+		.bar li span{
+			font-size: 0.3rem;
+			margin-left: 0.3rem;
+			float: left;
+			margin-top: 0.12rem;
+		}
+		.shopcar,.buy{
+			width: 3.15rem;
+			height: 100%;
+			float: right;
+			color: #fff;
+			line-height: 1.44rem;
+			text-align: center;
+			font-size: 0.4rem;
+		}
+		.shopcar{
+			background-color: #FF7E8D;
+		}
+		.buy{
+			background-color: #FF2741;
+		}
+		.new1{
+			height: 1.64rem;
+		}
+		.new1 li em{
+			font-size: 0.34rem;
+			font-family: 'iconfont';
+			color: #FF2741;
+			float: left;
+			line-height: 0.84rem;
+		}
+		.new1 li span{
+			font-size: 0.34rem;
+			color: #333;
+			line-height: 0.84rem;
+			float: left;
+			margin-right: 0.46rem;
+		}
+		.new1 .form1{
+			float: left;
+			color: #6E6E6E;
+			font-size: 0.28rem;
+		}
+		.new1 ul,.new1 ul li{
+			float: left;
+			width: 8.15rem;
+			overflow: hidden;
+		}
+		.new1 em{
+			float: right;
+			line-height: 1.64rem;
+		}
+		.des{
+			margin-top: 0.02rem;
+		}
+		.des img{
+			width: 100%;
+			height: 5.66rem;
+		}
+		#select{
+			margin-left: 0;
+		}
+		.new2{
+			margin-top: 0.02rem;
+			height: 2.66rem;
+		}
+		.new2 img{
+			width: 2.9rem;
+			height:100%;
+			float: left;
+		}
+		.word{
+			width: 4.6rem;
+			float: left;
+		}
+		.new2 h1{
+			margin-top: 0.6rem;
+			float: left;
+			font-size: 0.4rem;
+		}
+		.new2 p{
+			width: 4rem;
+			font-size: 0.36rem;
+			color: #333;
+			margin-left: 0;
+			float: left;
+		}
+		.new2 i{
+			color: #333;
+			float: right;
+			margin-right: 0.32rem;
+			font-size: 0.36rem;
+		}
+		.new2 em,.new2 i{
+			line-height: 2.66rem;
+		}
+		.new3{
+			margin-bottom: 1.2rem;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<a href="shopcar.html"><em class="return">&#xe622;</em></a>
+		<em class="download">&#xe7b8;</em>
+	</header>
+	<img src="img/Screenshot_2018-04-10-15-59-35-64_02.png" alt="">
+	<ul class="tejia">
+		<li class="content1">
+			<div class="limit">限时特价</div>
+			<span class="money">￥52</span>
+			<em>￥98</em>
+			<span class="oldmoney">5.3折</span>
+			<div class="shui">包税</div>
+		</li>
+		<li class="name">美白护肤平价超值·薏仁水500ml</li>
+		<li class="from">来自日本 <a href="">娥佩兰 Opera</a></li>
+	</ul>
+	<section class="new">
+		<div class="zhuanshu">新人专属</div>
+		<p>领新人薯券大礼包，最高减55元</p>
+		<em>&#xe667;</em>
+	</section>
+
+	<section class="new new1">
+		<ul>
+			<li>
+				<em>&#xe628;</em>
+				<span>一贵就赔</span>
+				<em>&#xe628;</em>
+				<span>七天保价</span>
+			</li>
+			<li class="form1">Opera娥佩兰官方品牌店发货·满199包邮·包税·七天退换</li>
+		</ul>
+		<em>&#xe667;</em>
+	</section>
+
+	<section class="new">
+		<p id="select">已选：500mlX1</p>
+		<em>&#xe667;</em>
+	</section>
+
+	<section class="des">
+		<img src="img/Screenshot_2018-04-10-15-59-45-85_02.png" alt="">
+	</section>
+
+	<section class="new new2">
+		<img src="img/Screenshot_2018-04-10-15-59-45-85_03.png" alt="">
+		<div class="word">
+			<h1>Opera娥佩兰官方品牌店</h1>
+			<p>在售商品 14件</p>
+		</div>
+		<em>&#xe667;</em>
+		<i>进店逛逛</i>
+	</section>
+
+	<section class="new new3">
+		<p id="select">其他销售此商品的卖家</p>
+		<em>&#xe667;</em>
+	</section>
+
+	<section class="bar">
+		<ul>
+			<li>
+				<em>&#xe736;</em>
+				<span>店铺</span>
+			</li>
+			<li>
+				<em>&#xe631;</em>
+				<span>购物车</span>
+			</li>
+			<li>
+				<em>&#xe653;</em>
+				<span>心愿单</span>
+			</li>
+		</ul>
+		<div class="buy">立即购买</div>
+		<div class="shopcar">加入购物车</div>
+	</section>
+</body>
+</html>

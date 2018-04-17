@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/public.css">
+	<script src="js/rem.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-style: normal;
+		}
+		body{
+			background-color: #E5E5E5;
+		}
+		header{
+			width: 100%;
+			height: 1.46rem;
+			background-color: #fff;
+		}
+		.jiantou{
+			margin-left: 0.7rem;
+			color: #ccc;
+			font-size: 0.52rem;
+			line-height: 1.46rem;
+			font-family: 'iconfont';
+			float: left;
+		}
+		h1{
+			color: #333;
+			font-size: 0.44rem;
+			line-height: 1.46rem;
+			text-align: center;
+			margin-right:0.52rem; 
+		}
+		#shop_head{
+			width: 100%;
+			height: 1.3rem;
+			background-color: #fff;
+			margin-top: 0.04rem;
+		}
+		.shop_head_icon{
+			width: 0.6rem;
+			height: 0.6rem;
+			border-radius: 50%;
+			margin-left: 0.3rem;
+			background-color: #CFCFCF;
+			margin-top: 0.36rem;
+			float: left;
+			position: relative;
+		}
+		.shop_head_icon:after{
+			content: "";
+			background-color: #fff;
+			width: 0.52rem;
+			height: 0.52rem;
+			border-radius: 50%;
+			position: absolute;
+			top: 0.04rem;
+			left: 0.04rem;
+		}
+		.dianpu{
+			float: left;
+			font-family: 'iconfont';
+			line-height: 1.3rem;
+			margin-left: 0.34rem;
+			color: #999;
+			font-size: 0.48rem;
+			margin-right: 0.2rem;
+		}
+		h2{
+			font-size: 0.36rem;
+			float: left;
+			color: #333;
+			line-height: 1.3rem;
+		}
+		#shop_content{
+			margin-top: 0.02rem;
+			background-color: #fff;
+			width: 100%;
+			height: 3.6rem;
+		}
+		.shop_head_icon1{
+			margin-top: 1.5rem;
+		}
+		.good{
+			width: 2.96rem;
+			height: 2.96rem;
+			border-radius: 0.08rem;
+			border: 1px solid #ECECEC;
+			margin-left: 0.3rem;
+			margin-top: 0.3rem;
+			float: left;
+			background: url('img/Screenshot_2018-04-09-13-09-47-18_03.png') no-repeat;
+			background-size: cover;
+		}
+		.shop_content_right{
+			margin-top: 0.4rem;
+			margin-left: 0.3rem;
+			float: left;
+		}
+		.shop_title{
+			width: 1.38rem;
+			height: 0.46rem;
+			background-color: #FF2741;
+			border-radius: 0.04rem;
+			color: #fff;
+			text-align: center;
+			line-height: 0.46rem;
+			font-size: 0.32rem;
+			float: left;
+		}
+
+		h3{
+			font-size: 0.32rem;
+			color: #333;
+			float: left;
+			margin-left: 0.12rem;
+		}
+		.wrap{
+			width: 0.5rem;
+			font-size: 0.32rem;
+			color: #333;
+			margin-top: 0.18rem;
+			font-weight: bold;
+		}
+		.shop_content_right em{
+			color: #FF324B;
+			margin-top:1.58rem;
+			font-size: 0.32rem;
+			float: left;
+		}
+		.add{
+			width: 1.9rem;
+			height: 0.74rem;
+			float: left;
+			margin-left: 1.7rem;
+			margin-top:1.36rem;
+			border: 1px solid #ccc;
+			border-radius: 0.08rem;
+			padding: 0 0.16rem;
+		}
+		.add i{
+			font-size: 0.4rem;
+			color: #ccc;
+			float: left;
+			line-height: 0.74rem;
+		}
+		.add span{
+			float: left;
+			font-size: 0.4rem;
+			color: #333;
+			margin: 0 0.42rem;
+			line-height: 0.74rem;
+		}
+		.del{
+			margin-left: 0.48rem;
+			color: #ccc;
+			font-family: 'iconfont';
+			font-size: 0.36rem;
+			float: left;
+			margin-top: 1.56rem;
+		}
+		#like{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			background-color: #F5F8FA;
+		}
+		h5{
+			color: #9D9D9D;
+			height: 1.32rem;
+			width: 100%;
+			font-size: 0.3rem;
+			line-height: 1.32rem;
+			text-align: center;
+			position: relative;
+		}
+		h5:before{
+			content: "";
+			width: 0.08rem;
+			height: 0.04rem;
+			background-color: #999;
+			position: absolute;
+			left: 4.24rem;
+			top: 0.64rem;
+		}
+		h5:after{
+			content: "";
+			width: 0.08rem;
+			height: 0.04rem;
+			background-color: #999;
+			position: absolute;
+			right: 4.24rem;
+			top: 0.64rem;
+		}
+		.content_list{
+			width: 4.96rem;
+			height: 8.92rem;
+			border-radius: 0.02rem;
+			background: url('img/Screenshot_2018-04-09-13-09-47-18_05.png'); 
+			background-position: top center;
+			background-repeat: no-repeat;
+			background-size: 100% 5rem;
+			float: left;
+			margin-left: 0.3rem;
+			margin-bottom: 0.3rem;
+			background-color: #fff;
+		}
+		.content_list:nth-of-type(2),.content_list:nth-of-type(4){
+			background: url('img/1.png'); 
+			background-position: top center;
+			background-repeat: no-repeat;
+			background-size: 100% 5rem;
+			float: right;
+			margin-left: 0;
+			margin-right: 0.3rem;
+			background-color: #fff;
+
+		}
+		.content_list h4{
+			font-size: 0.36rem;
+			color: #333;
+			margin-top: 5.6rem;
+			float: left;
+			margin-left: 0.24rem;
+		}
+		.content_list p{
+			color: #666;
+			font-size: 0.4rem;
+			float: left;
+			margin-left: 0.24rem;
+			margin-top: 0.20rem;
+		}
+		.content_list span{
+			font-size: 0.3rem;
+			color: #FF2741;
+			float: left;
+			margin-left: 0.24rem;
+			margin-top: 0.2rem;
+		}
+		.content_list em{
+			font-size: 0.3rem;
+			color: #adadad;
+			float: left;
+			margin-left: 0.24rem;
+			margin-top: 0.2rem;
+			text-decoration-line: line-through;
+		}
+		.content_list i{
+			font-size: 0.36rem;
+			color: #333;
+			float: left;
+			margin-left: 0.4rem;
+			margin-top: 0.2rem;
+		}
+		.tejia{
+			margin-left: 0.3rem;
+		}
+		#bar{
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 1.5rem;
+			background-color: #fff;
+		}
+		.select{
+			font-size: 0.4rem;
+			line-height: 1.5rem;
+			color: #999;
+			float: left;
+			margin-left: 0.24rem;
+		}
+		.shop_head_icon2{
+			margin-top: 0.48rem;
+		}
+		.bar_right{
+			float: right;
+		}
+		.total{
+			color: #999;
+			font-size: 0.4rem;
+			margin-top: 0.24rem;
+			float: right;
+		}
+		.bar_right i{
+			color: #FF2741;
+		}
+		.yunfei{
+			color: #999;
+			font-size: 0.4rem;
+			color: #ccc;
+			float: right;
+		}
+		.money{
+			width: 2rem;
+			float: right;
+			margin-right: 0.3rem;
+		}
+		.jiesuan{
+			width: 3.24rem;
+			height: 100%;
+			background-color:  #FF2741;
+			text-align: center;
+			color: #fff;
+			line-height: 1.5rem;
+			font-size: 0.48rem;
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<a href="index.html"><em class="jiantou">&#xe622;</em></a>
+		<h1>购物车</h1>
+	</header>
+	<section id="shop_head">
+		<div class="shop_head_icon"></div>
+		<em class="dianpu">&#xe736;</em>
+		<h2>Opera娥佩兰官方旗舰店</h2>
+	</section>
+	<a href="detail.html">
+		<section id="shop_content">
+			<div class="shop_head_icon shop_head_icon1"></div>
+			<div class="good"></div>
+			<div class="shop_content_right">
+				<div class="shop_title">限时特价</div>
+				<h3>Opera娥佩兰 薏仁水</h3>
+				<div class="wrap">500ml</div>
+				<em>￥52</em>
+				<div class="add">
+					<i>-</i>
+					<span>1</span>
+					<i>+</i>
+				</div>
+				<div class="del">&#xe60d;</div>
+			</div>
+		</section>
+	</a>
+	<section id="like">
+		<h5>队长猜你喜欢</h5>
+		<div class="content_list">
+			<h4>中国·简约时尚欧美潮流</h4>
+			<p>小兔工作室PIN ZIKO 春季新款刺绣夹克</p>
+			<span>￥179</span>
+			<em>￥268</em>
+			<i>PIN ZIKO</i>
+			<div class="shop_title tejia">限时特价</div>
+		</div>
+		<div class="content_list">
+			<h4>中国·简约时尚欧美潮流</h4>
+			<p>小兔工作室PIN ZIKO 春季新款刺绣夹克</p>
+			<span>￥179</span>
+			<em>￥268</em>
+			<i>PIN ZIKO</i>
+			<div class="shop_title tejia">限时特价</div>
+		</div>
+		<div class="content_list">
+			<h4>中国·简约时尚欧美潮流</h4>
+			<p>小兔工作室PIN ZIKO 春季新款刺绣夹克</p>
+			<span>￥179</span>
+			<em>￥268</em>
+			<i>PIN ZIKO</i>
+			<div class="shop_title tejia">限时特价</div>
+		</div>
+		<div class="content_list">
+			<h4>中国·简约时尚欧美潮流</h4>
+			<p>小兔工作室PIN ZIKO 春季新款刺绣夹克</p>
+			<span>￥179</span>
+			<em>￥268</em>
+			<i>PIN ZIKO</i>
+			<div class="shop_title tejia">限时特价</div>
+		</div>
+	</section>
+	<section id="bar">
+		<div class="shop_head_icon shop_head_icon2"></div>
+		<span class="select">全选</span>
+		<div class="bar_right">
+			<div class="jiesuan">结算</div>
+			<div class="money">
+				<span class="total">总计：<i>￥0</i></span>
+				<span class="yunfei">免运费</span>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
